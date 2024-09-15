@@ -1,0 +1,25 @@
+{
+  "identifier": "delete-rg",
+  "title": "Delete the Azure resource group",
+  "userInputs": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "Confirm by typing the name of the resource group"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  },
+  "invocationMethod": {
+    "type": "GITHUB",
+    "org": "aniketuniverse",
+    "repo": "self-service-azure",
+    "workflow": "delete-rg.yaml",
+    "omitPayload": true
+  },
+  "trigger": "DELETE",
+  "description": "Delete the Azure resource group."
+}

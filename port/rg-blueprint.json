@@ -1,0 +1,37 @@
+{
+    "identifier": "rg",
+    "description": "This blueprint represents a Azure resource group",
+    "title": "RG",
+    "icon": "Azure",
+    "schema": {
+      "properties": {
+        "provider": {
+            "type": "string",
+            "title": "Provider",
+            "default": "n/a",
+            "description": "The provider where the rg is hosted",
+            "enum": [
+                "azure",
+                "n/a"
+            ]
+        },
+        "location": {
+          "type": "string",
+          "title": "Location",
+          "description": "The location of the rg"
+        },
+        "status": {
+          "type": "string",
+          "title": "Status",
+          "description": "The status of the rg"
+        }
+      },
+      "required": [
+        "name",
+        "location",
+      ]
+    },
+    "mirrorProperties": {},
+    "calculationProperties": {},
+    "relations": {}
+  }

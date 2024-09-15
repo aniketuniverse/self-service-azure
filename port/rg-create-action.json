@@ -1,0 +1,30 @@
+{
+  "identifier": "create-rg",
+  "title": "Create a Azure Resource group",
+  "userInputs": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "The name of the RG"
+      },
+      "location": {
+        "type": "string",
+        "title": "Location",
+        "default": "westus",
+        "description": "The provider where the cluster is hosted",
+        "enum": ["westus2", "westus","eastus"]
+      }
+    },
+    "required": ["name", "location"]
+  },
+  "invocationMethod": {
+    "type": "GITHUB",
+    "org": "aniketuniverse",
+    "repo": "self-service-azure",
+    "workflow": "create-rg.yaml",
+    "omitPayload": true
+  },
+  "trigger": "CREATE",
+  "description": "Create a new Azure resource group."
+}
