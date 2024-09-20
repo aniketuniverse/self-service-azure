@@ -1,10 +1,40 @@
-- identifier: az_rg
-  title: Azure Resource Groups
+- identifier: idpdemo3-rg
+  title: idpdemo3-rg
   team: []
   icon: DefaultBlueprint
   blueprint: resource_group
   properties:
-    name: string
-    location: string
-    status: string
+    name: idpdemo3
+    location: eastus
+    status: Success
+  relations: {}
+- identifier: idpdemo2-rg
+  title: idpdemo2-rg
+  team: []
+  icon: DefaultBlueprint
+  blueprint: resource_group
+  properties:
+    name: idpdemo2
+    location: eastus
+    status: Success
+  relations: {}
+- identifier: idpdemo1-rg
+  title: idpdemo1-rg
+  team: []
+  icon: DefaultBlueprint
+  blueprint: resource_group
+  properties:
+    name: idpdemo1
+    location: eastus
+    status: Success
+  relations: {}
+- identifier: idpdemo4-rg
+  title: idpdemo4-rg
+  team: []
+  icon: DefaultBlueprint
+  blueprint: resource_group
+  properties:
+    name: idpdemo4
+    location: eastus
+    status: Success
   relations: {}
