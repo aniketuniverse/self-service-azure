@@ -1,25 +1,15 @@
-name: Create a cluster
+name: Create a RG
 on:
   workflow_dispatch:
     inputs:
       name:
         required: true
-        description: "The name of the cluster"
-      provider:
+        description: "The name of the Resource Group"
+      location:
         required: true
-        description: "The provider where the cluster is hosted"
-        default: "aws"
-      cluster:
-        required: true
-        description: "The type of the cluster"
-      node-size:
-        required: true
-        description: "The size of the nodes"
-        default: "small"
-      min-node-count:
-        required: true
-        description: "The minnimun number of nodes (autoscaler might increase this number)"
-        default: "1"
+        description: "The resource group location"
+        default: "West Europe"
+
 jobs:
   deploy-app:
     runs-on: ubuntu-latest
@@ -28,16 +18,16 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
-      - name: Create cluster
+      - name: Create RG
         run: |
-          chmod +x scripts/create-cluster.sh
-          ./scripts/create-cluster.sh ${{ inputs.name }} ${{ inputs.provider }} ${{ inputs.cluster }} ${{ inputs.node-size }} ${{ inputs.min-node-count }}
+          chmod +x scripts/create-rg.sh
+          ./scripts/create-rg.sh ${{ inputs.name }} ${{ inputs.location }}
       - name: Commit changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
-          git commit -m "Create cluster ${{ inputs.name }}"
+          git commit -m "Create rg ${{ inputs.name }}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
