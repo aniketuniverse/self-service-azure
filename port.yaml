@@ -1,0 +1,10 @@
+- identifier: az_rg
+  title: Azure Resource Groups
+  team: []
+  icon: DefaultBlueprint
+  blueprint: resource_group
+  properties:
+    name: string
+    location: string
+    status: string
+  relations: {}
