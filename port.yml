@@ -8,33 +8,33 @@
     location: eastus
     status: Success
   relations: {}
-- identifier: idpdemo2-rg
-  title: idpdemo2-rg
+- identifier: testdemo2-rg
+  title: testdemo2-rg
   team: []
   icon: DefaultBlueprint
   blueprint: resource_group
   properties:
-    name: idpdemo2
+    name: testdemo2
     location: eastus
     status: Success
   relations: {}
-- identifier: idpdemo1-rg
-  title: idpdemo1-rg
+- identifier: testdemo1-rg
+  title: testdemo1-rg
   team: []
   icon: DefaultBlueprint
   blueprint: resource_group
   properties:
-    name: idpdemo1
+    name: testdemo1
     location: eastus
     status: Success
   relations: {}
-- identifier: idpdemo4-rg
-  title: idpdemo4-rg
+- identifier: testdemo4-rg
+  title: testdemo4-rg
   team: []
   icon: DefaultBlueprint
   blueprint: resource_group
   properties:
-    name: idpdemo4
+    name: testdemo4
     location: eastus
     status: Success
   relations: {}
