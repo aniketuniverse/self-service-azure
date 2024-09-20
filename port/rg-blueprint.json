@@ -5,15 +5,11 @@
     "icon": "Azure",
     "schema": {
       "properties": {
-        "provider": {
+        "name": {
             "type": "string",
-            "title": "Provider",
+            "title": "Resource Group Name",
             "default": "n/a",
-            "description": "The provider where the rg is hosted",
-            "enum": [
-                "azure",
-                "n/a"
-            ]
+            "description": "Resource Group Name"
         },
         "location": {
           "type": "string",
