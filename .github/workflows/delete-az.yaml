@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
       - name: Delete RG
         run: |
-          rm infra/${{ fromJson(inputs.port_context).entity.properties.name }}.yaml
+          rm infra/${{ fromJson(inputs.port_context).entity.properties.name }}-rg.yaml
       - name: Commit changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
