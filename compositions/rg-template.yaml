@@ -1,7 +1,9 @@
----
-apiVersion: azure.crossplane.io/v1alpha3
+apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
   name: NAME
 spec:
-  location: LOCATION
+  forProvider:
+    location: LOCATION
+    tags:
+      provisioner: crossplane
