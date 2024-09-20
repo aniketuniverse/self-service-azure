@@ -28,13 +28,3 @@
     location: eastus
     status: Success
   relations: {}
-- identifier: testdemo4-rg
-  title: testdemo4-rg
-  team: []
-  icon: DefaultBlueprint
-  blueprint: resource_group
-  properties:
-    name: testdemo4
-    location: eastus
-    status: Success
-  relations: {}
