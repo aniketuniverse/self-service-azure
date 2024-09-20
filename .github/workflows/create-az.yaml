@@ -39,3 +39,18 @@ jobs:
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
           branch: ${{ github.ref }}
+          
+      - name: Create a log message
+        uses: port-labs/port-github-action@v1
+        with:
+          clientId: ${{ secrets.PORT_CLIENT_ID }}
+          clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+          baseUrl: https://api.getport.io
+          operation: PATCH_RUN
+          runId: ${{fromJson(inputs.port_context).runId}}
+          properties: |
+                  {
+                    "status": "Success"
+                  }
+          blueprint: ${{fromJson(inputs.port_context).blueprint}}
+          logMessage: Created ${{ inputs.name }}
