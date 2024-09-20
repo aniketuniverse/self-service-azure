@@ -5,6 +5,12 @@ on:
       name:
         required: true
         description: "The name of the RG"
+      port_context:
+        required: true
+        description:
+            Port's payload, including details for who triggered the action and
+            general context (blueprint, run id, etc...)
+        type: string
 jobs:
   deploy-app:
     runs-on: ubuntu-latest
