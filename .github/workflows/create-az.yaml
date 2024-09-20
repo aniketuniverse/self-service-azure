@@ -9,6 +9,12 @@ on:
         required: true
         description: "The resource group location"
         default: "West Europe"
+      port_context:
+        required: true
+        description:
+            Port's payload, including details for who triggered the action and
+            general context (blueprint, run id, etc...)
+        type: string
 
 jobs:
   deploy-app:
