@@ -1,20 +1,19 @@
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: production-infra
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
-  source:
-    repoURL: https://github.com/port-labs/self-service-azure/
-    targetRevision: HEAD
-    path: infra
   destination:
-    server: https://kubernetes.default.svc
+    name: ''
     namespace: infra
+    server: https://kubernetes.default.svc
+  source:
+    path: infra
+    repoURL: https://github.com/aniketuniverse/self-service-azure.git
+    targetRevision: HEAD
+  sources: []
+  project: default
   syncPolicy:
     automated:
       selfHeal: true
