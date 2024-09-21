@@ -11,10 +11,10 @@ spec:
   source:
     repoURL: https://github.com/port-labs/self-service-azure/
     targetRevision: HEAD
-    path: crossplane/infra
+    path: infra
   destination:
     server: https://kubernetes.default.svc
-    namespace: production
+    namespace: infra
   syncPolicy:
     automated:
       selfHeal: true
