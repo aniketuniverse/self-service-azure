@@ -1,0 +1,9 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  name: crossplanedemo1
+spec:
+  forProvider:
+    location: eastus
+    tags:
+      provisioner: crossplane
